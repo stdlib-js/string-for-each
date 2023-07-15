@@ -78,7 +78,11 @@
     "iterate",
     "stdstring",
     "string",
-    "str"
+    "str",
+    "grapheme",
+    "unicode",
+    "utf16",
+    "utf-16"
   ],
   "funding": {
     "type": "opencollective",
