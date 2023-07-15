@@ -34,41 +34,33 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-for-each
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-forEach = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js' )
+var forEach = require( '@stdlib/string-for-each' );
 ```
 
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var forEach = require( 'path/to/vendor/umd/string-for-each/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.forEach;
-})();
-</script>
-```
-
-#### forEach( str, clbk\[, thisArg ] )
+#### forEach( str, \[options,] clbk\[, thisArg ] )
 
 Invokes a function for each character in a string.
 
@@ -112,6 +104,16 @@ var bool = ( str.length === ctx.count );
 // returns true
 ```
 
+The function supports the following options:
+
+-   **mode**: type of characters over which to iterate. Must be one of the following:
+
+    -   `'grapheme'`: grapheme clusters. Appropriate for strings containing visual characters which can span multiple Unicode code points (e.g., emoji).
+    -   `'code_point'`: Unicode code points. Appropriate for strings containing visual characters which are comprised of more than one Unicode code units.
+    -   `'code_unit'`: UTF-16 code units. Appropriate for strings containing visual characters drawn from the basic multilingual plane (BMP) (e.g., common characters, such as those from the Latin, Greek, and Cyrillic alphabets).
+    
+    Default: `'grapheme'`.
+
 </section>
 
 <!-- /.usage -->
@@ -119,6 +121,10 @@ var bool = ( str.length === ctx.count );
 <!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
 <section class="notes">
+
+## Notes
+
+-   By default, the function assumes the general case in which an input string may contain an arbitrary number of grapheme clusters. This assumption comes with a performance cost. Accordingly, if an input string is known to only contain visual characters of a particular type (e.g., only alphanumeric), one can achieve better performance by specifying the appropriate `mode` option.
 
 </section>
 
@@ -132,13 +138,8 @@ var bool = ( str.length === ctx.count );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var forEach = require( '@stdlib/string-for-each' );
 
 function log( value, index ) {
     console.log( '%d: %s', index, value );
@@ -148,11 +149,6 @@ forEach( 'presidential election', log );
 forEach( 'Iñtërnâtiônàlizætiøn', log );
 forEach( '🌷🍕', log );
 forEach( '\uD834\uDD1E', log );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
