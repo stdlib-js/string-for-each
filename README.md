@@ -41,6 +41,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/string-for-each/tags). For example,
+
+```javascript
 import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.0-esm/index.mjs';
 ```
 
@@ -114,7 +119,7 @@ var bool = ( str.length === ctx.count );
 <body>
 <script type="module">
 
-import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.0-esm/index.mjs';
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@esm/index.mjs';
 
 function log( value, index ) {
     console.log( '%d: %s', index, value );
