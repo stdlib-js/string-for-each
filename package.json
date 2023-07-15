@@ -37,10 +37,15 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
+    "@stdlib/array-base-assert-contains": "github:stdlib-js/array-base-assert-contains#main",
+    "@stdlib/assert-has-own-property": "^0.0.7",
     "@stdlib/assert-is-function": "^0.0.8",
+    "@stdlib/assert-is-plain-object": "^0.0.7",
     "@stdlib/assert-is-string": "^0.0.8",
-    "@stdlib/string-format": "^0.0.3",
-    "@stdlib/string-next-grapheme-cluster-break": "^0.0.9"
+    "@stdlib/string-base-for-each": "github:stdlib-js/string-base-for-each#main",
+    "@stdlib/string-base-for-each-code-point": "github:stdlib-js/string-base-for-each-code-point#main",
+    "@stdlib/string-base-for-each-grapheme-cluster": "github:stdlib-js/string-base-for-each-grapheme-cluster#main",
+    "@stdlib/string-format": "^0.0.3"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.12",
