@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Invokes a callback once for each (visual) character of a string.
+> Invokes a function for each character in a string.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -34,71 +34,56 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/string-for-each
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-forEach = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var forEach = require( 'path/to/vendor/umd/string-for-each/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.forEach;
-})();
-</script>
+var forEach = require( '@stdlib/string-for-each' );
 ```
 
 #### forEach( str, clbk\[, thisArg ] )
 
-Invokes a function for each (visual) character of a string.
+Invokes a function for each character in a string.
 
 ```javascript
 function log( value, index ) {
     console.log( '%d: %s', index, value );
 }
 
-forEach( 'Hello, world!', log );
+forEach( 'Beep!', log );
 /* =>
-    0: H
+    0: B
     1: e
-    2: l
-    3: l
-    4: o
-    5:
-    6: W
-    7: o
-    8: r
-    9: l
-    10: d
-    11: !
+    2: e
+    3: p
+    4: !
 */
 ```
 
 The invoked function is provided three arguments:
 
--   `value`: visual character
--   `index`: starting character index
--   `str`: input string
+-   **value**: character.
+-   **index**: starting character index.
+-   **str**: input string.
 
 To set the function execution context, provide a `thisArg`.
 
@@ -139,13 +124,8 @@ var bool = ( str.length === ctx.count );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var forEach = require( '@stdlib/string-for-each' );
 
 function log( value, index ) {
     console.log( '%d: %s', index, value );
@@ -155,11 +135,6 @@ forEach( 'presidential election', log );
 forEach( 'Iñtërnâtiônàlizætiøn', log );
 forEach( '🌷🍕', log );
 forEach( '\uD834\uDD1E', log );
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
