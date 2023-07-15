@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@esm/index.mjs';
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.0-esm/index.mjs';
 ```
 
 #### forEach( str, clbk\[, thisArg ] )
@@ -114,7 +114,7 @@ var bool = ( str.length === ctx.count );
 <body>
 <script type="module">
 
-import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@esm/index.mjs';
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.0-esm/index.mjs';
 
 function log( value, index ) {
     console.log( '%d: %s', index, value );
