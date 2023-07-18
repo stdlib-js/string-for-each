@@ -45,7 +45,7 @@
     "@stdlib/string-base-for-each": "github:stdlib-js/string-base-for-each#main",
     "@stdlib/string-base-for-each-code-point": "github:stdlib-js/string-base-for-each-code-point#main",
     "@stdlib/string-base-for-each-grapheme-cluster": "github:stdlib-js/string-base-for-each-grapheme-cluster#main",
-    "@stdlib/string-format": "^0.0.3"
+    "@stdlib/error-tools-fmtprodmsg": "^0.0.2"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.12",
