@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/string-for-each",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Invoke a function for each character in a string.",
   "license": "Apache-2.0",
   "author": {
@@ -37,14 +37,14 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/array-base-assert-contains": "github:stdlib-js/array-base-assert-contains#main",
+    "@stdlib/array-base-assert-contains": "^0.0.1",
     "@stdlib/assert-has-own-property": "^0.0.7",
     "@stdlib/assert-is-function": "^0.0.8",
     "@stdlib/assert-is-plain-object": "^0.0.7",
     "@stdlib/assert-is-string": "^0.0.8",
-    "@stdlib/string-base-for-each": "github:stdlib-js/string-base-for-each#main",
-    "@stdlib/string-base-for-each-code-point": "github:stdlib-js/string-base-for-each-code-point#main",
-    "@stdlib/string-base-for-each-grapheme-cluster": "github:stdlib-js/string-base-for-each-grapheme-cluster#main",
+    "@stdlib/string-base-for-each": "^0.0.1",
+    "@stdlib/string-base-for-each-code-point": "^0.0.1",
+    "@stdlib/string-base-for-each-grapheme-cluster": "^0.0.1",
     "@stdlib/string-format": "^0.0.3"
   },
   "devDependencies": {
