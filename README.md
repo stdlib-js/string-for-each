@@ -41,7 +41,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@deno/mod.js';
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.1-deno/mod.js';
 ```
 
 #### forEach( str, \[options,] clbk\[, thisArg ] )
@@ -123,7 +123,7 @@ The function supports the following options:
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@deno/mod.js';
+import forEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/string-for-each@v0.0.1-deno/mod.js';
 
 function log( value, index ) {
     console.log( '%d: %s', index, value );
