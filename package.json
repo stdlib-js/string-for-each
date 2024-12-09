@@ -45,7 +45,7 @@
     "@stdlib/string-base-for-each": "^0.2.2",
     "@stdlib/string-base-for-each-code-point": "^0.2.2",
     "@stdlib/string-base-for-each-grapheme-cluster": "^0.2.2",
-    "@stdlib/string-format": "^0.2.2",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2",
     "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
